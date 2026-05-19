@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Analysis History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        .history-container { padding: 40px 20px; }
+        .history-card { background: white; padding: 30px; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .history-card h1 { color: #1f2937; }
+        .history-card h3 { color: #1f2937; }
+        .chart-container { position: relative; height: 400px; margin: 30px 0; }
+        .history-table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+        .history-table th, .history-table td { padding: 12px; text-align: left; border-bottom: 1px solid #e5e7eb; color: #1f2937; }
+        .history-table th { background: #f3f4f6; font-weight: 600; color: #111827; }
+        .history-table tr:hover { background: #f9fafb; }
+        .badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .badge-success { background: #d1fae5; color: #065f46; }
+        .badge-warning { background: #fef3c7; color: #92400e; }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin: 30px 0; }
+        .stat-box { background: #f3f4f6; padding: 20px; border-radius: 8px; }
+        .stat-value { font-size: 28px; font-weight: bold; color: #1f2937; }
+        .stat-label { color: #1f2937; font-size: 14px; margin-top: 5px; font-weight: 500; }
+        .no-history { text-align: center; padding: 60px 20px; color: #1f2937; }
+        /* Modal for drill-down */
+        .modal-backdrop { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            right: 0; 
+            bottom: 0; 
+            background: rgba(0,0,0,0.5); 
+            display: none; 
+            align-items: center; 
+            justify-content: center; 
+            z-index: 9999 !important; 
+            visibility: hidden;
+        }
+        .modal-backdrop.active { 
+            display: flex !important;
+            visibility: visible !important;
+        }
+        .modal { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 8px; 
+            width: 90%; 
+            max-width: 800px; 
+            max-height: 80vh; 
+            overflow: auto; 
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4); 
+            position: relative;
+            z-index: 10000 !important;
+        }
+        .modal-header { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+        .modal-title { font-size:18px; font-weight:700; color: #1f2937; }
+        .close-btn { background:#ef4444; color:white; border:none; padding:6px 10px; border-radius:6px; cursor:pointer; }
+        .missing-list { margin-top:10px; }
+        .missing-item { background:#fff7ed; padding:8px 10px; border-radius:6px; margin:6px 0; color: #1f2937; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="AI Resume Analyzer logo" class="logo" />
+                <h1>AI Resume Analyzer</h1>
+            </div>
+            <ul class="nav-links"><li><a href="/">Home</a></li></ul>
+            <div class="nav-actions">
+                <span id="userInfo" style="margin-right:15px; color:#1f2937; font-weight: 500;"></span>
+                <a href="/" class="btn-small">Back to Analyzer</a>
+                <button id="btnLogout" class="btn-small">Logout</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="history-container">
+        <div class="container">
+            <div class="history-card">
+                <h1>Resume Analysis History & Progress</h1>
+                
+                <div id="statsSection">
+                    <div class="stats-grid">
+                        <div class="stat-box">
+                            <div class="stat-value" id="totalAnalyses">0</div>
+                            <div class="stat-label">Total Analyses</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="avgScore">0%</div>
+                            <div class="stat-label">Average Score</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="improvement">0%</div>
+                            <div class="stat-label">Overall Improvement</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-value" id="skillsGained">0</div>
+                            <div class="stat-label">Skills Gained</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="color: #1f2937;">📈 TF-IDF Score Progress</h3>
+                    <div class="chart-container">
+                        <canvas id="scoreChart"></canvas>
+                    </div>
+                </div>
+
+                <div style="background: #f9fafb; padding: 20px; border-radius: 8px; margin: 20px 0;">
+                    <h3 style="color: #1f2937;">🎯 Skill Match by Role</h3>
+                    <div class="chart-container">
+                        <canvas id="skillChart"></canvas>
+                    </div>
+                </div>
+
+                <h3 style="margin-top: 40px; color: #1f2937;">📋 All Analyses</h3>
+                <table class="history-table" id="historyTable">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Job Role</th>
+                            <th>TF-IDF Score</th>
+                            <th>Skill Match</th>
+                            <th>Skills Found</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="historyBody">
+                        <tr><td colspan="6" style="text-align:center; color:#1f2937;">Loading...</td></tr>
+                    </tbody>
+                </table>
+
+                <div id="noHistoryMsg" class="no-history" style="display:none;">
+                    <p>📭 No analyses yet. <a href="/" style="color: #2563eb; text-decoration: underline;">Start by uploading a resume!</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Drill-down modal -->
+    <div id="modalBackdrop" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.6); display: none; align-items: center; justify-content: center; z-index: 9999;">
+        <div style="background: white; padding: 30px; border-radius: 8px; width: 90%; max-width: 800px; max-height: 80vh; overflow: auto; box-shadow: 0 10px 40px rgba(0,0,0,0.5); position: relative; z-index: 10000;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <div id="modalTitle" style="font-size: 20px; font-weight: 700; color: #1f2937;">Missing Skills</div>
+                <button id="modalClose" style="background: #ef4444; color: white; border: none; padding: 8px 12px; border-radius: 6px; cursor: pointer; font-weight: 600;">Close</button>
+            </div>
+            <div id="modalContent" style="color: #1f2937;">
+                <div id="modalSummary"></div>
+                <h4 style="margin-top: 20px; margin-bottom: 10px; color: #1f2937;">Per Upload Details</h4>
+                <div id="modalUploads"></div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Resume Analyzer</p>
+    </footer>
+
+    <script>
+        let analysisData = [];
+        let scoreChart = null;
+        let skillChart = null;
+
+        async function loadHistory() {
+            try {
+                const res = await fetch('/api/history', { credentials: 'same-origin' });
+                const data = await res.json();
+                
+                if (!data.analyses || data.analyses.length === 0) {
+                    document.getElementById('noHistoryMsg').style.display = 'block';
+                    document.getElementById('historyTable').style.display = 'none';
+                    document.getElementById('statsSection').innerHTML = '<p style="text-align:center; color:#1f2937; font-size:16px;">No data to show yet</p>';
+                    return;
+                }
+
+                analysisData = data.analyses.sort((a, b) => new Date(a.timestamp) - new Date(b.timestamp));
+                
+                // Update user info
+                if (data.user) {
+                    document.getElementById('userInfo').textContent = `👤 ${data.user.phone_number || data.user.username}`;
+                }
+
+                // Populate table
+                populateTable();
+                
+                // Update stats
+                updateStats();
+                
+                // Draw charts
+                drawCharts();
+            } catch (e) {
+                console.error('Error loading history:', e);
+            }
+        }
+
+        function populateTable() {
+            const tbody = document.getElementById('historyBody');
+            tbody.innerHTML = analysisData.map(a => `
+                <tr>
+                    <td>${new Date(a.timestamp).toLocaleDateString()}</td>
+                    <td>${a.job_role}</td>
+                    <td><strong>${(a.tfidf_score).toFixed(1)}%</strong></td>
+                    <td>${(a.skill_match * 100).toFixed(1)}%</td>
+                    <td>${a.skills_count || 0}</td>
+                    <td><span class="badge ${a.tfidf_score > 50 ? 'badge-success' : 'badge-warning'}">${a.tfidf_score > 50 ? 'Good' : 'Needs Work'}</span></td>
+                </tr>
+            `).join('');
+        }
+
+        function updateStats() {
+            const total = analysisData.length;
+            const avgScore = analysisData.length > 0 
+                ? (analysisData.reduce((sum, a) => sum + a.tfidf_score, 0) / total).toFixed(1)
+                : 0;
+            
+            const improvement = total > 1
+                ? Math.max(0, (analysisData[total-1].tfidf_score - analysisData[0].tfidf_score)).toFixed(1)
+                : 0;
+
+            const uniqueSkills = new Set();
+            analysisData.forEach(a => {
+                if (a.skills && Array.isArray(a.skills)) {
+                    a.skills.forEach(s => uniqueSkills.add(s));
+                }
+            });
+
+            document.getElementById('totalAnalyses').textContent = total;
+            document.getElementById('avgScore').textContent = avgScore + '%';
+            document.getElementById('improvement').textContent = improvement + '%';
+            document.getElementById('skillsGained').textContent = uniqueSkills.size;
+        }
+
+        function drawCharts() {
+            if (analysisData.length === 0) return;
+
+            // Score progression chart
+            const scoreCtx = document.getElementById('scoreChart').getContext('2d');
+            if (scoreChart) scoreChart.destroy();
+            scoreChart = new Chart(scoreCtx, {
+                type: 'line',
+                data: {
+                    labels: analysisData.map((a, i) => `Upload ${i + 1}`),
+                    datasets: [{
+                        label: 'TF-IDF Score',
+                        data: analysisData.map(a => Number(Number(a.tfidf_score).toFixed(1))),
+                        borderColor: '#3b82f6',
+                        backgroundColor: 'rgba(59, 130, 246, 0.1)',
+                        tension: 0.4,
+                        fill: true,
+                        pointRadius: 6,
+                        pointHoverRadius: 8,
+                        pointBackgroundColor: '#3b82f6'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, max: 100 }
+                    }
+                }
+            });
+
+            // Skill match by role chart
+            const skillByRole = {};
+            analysisData.forEach(a => {
+                if (!skillByRole[a.job_role]) {
+                    skillByRole[a.job_role] = [];
+                }
+                skillByRole[a.job_role].push(a.skill_match * 100);
+            });
+
+            const skillCtx = document.getElementById('skillChart').getContext('2d');
+            if (skillChart) skillChart.destroy();
+            skillChart = new Chart(skillCtx, {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(skillByRole),
+                    datasets: [{
+                        label: 'Avg Skill Match %',
+                        data: Object.values(skillByRole).map(scores => Number((scores.reduce((a,b) => a+b, 0) / scores.length).toFixed(1))),
+                        backgroundColor: '#10b981'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: {
+                        y: { beginAtZero: true, max: 100 }
+                    }
+                }
+            });
+
+            // Add click handler using addEventListener
+            const skillCanvas = document.getElementById('skillChart');
+            skillCanvas.addEventListener('click', (evt) => {
+                const canvasPosition = Chart.helpers.getRelativePosition(evt, skillChart);
+                const dataX = skillChart.scales.x.getValueForPixel(canvasPosition.x);
+                
+                if (dataX !== undefined && dataX !== null) {
+                    const role = Object.keys(skillByRole)[Math.round(dataX)];
+                    if (role) {
+                        showSkillModal(role);
+                    }
+                }
+            });
+        }
+
+        function showSkillModal(role) {
+            const backdrop = document.getElementById('modalBackdrop');
+            if (!backdrop) {
+                console.error('Modal backdrop not found!');
+                return;
+            }
+            
+            const title = document.getElementById('modalTitle');
+            const summary = document.getElementById('modalSummary');
+            const uploads = document.getElementById('modalUploads');
+
+            title.textContent = `Missing Skills — ${role}`;
+            // filter analyses for role
+            const roleAnalyses = analysisData.filter(a => a.job_role === role);
+            // aggregate missing skills
+            const agg = {};
+            roleAnalyses.forEach(a => {
+                if (Array.isArray(a.missing_skills)) {
+                    a.missing_skills.forEach(s => { agg[s] = (agg[s] || 0) + 1; });
+                }
+            });
+
+            const sorted = Object.entries(agg).sort((a,b) => b[1] - a[1]);
+            summary.innerHTML = '';
+            if (sorted.length === 0) {
+                summary.innerHTML = '<p style="color:#6b7280;">No missing skills recorded for this role.</p>';
+            } else {
+                const list = document.createElement('div');
+                list.className = 'missing-list';
+                sorted.forEach(([skill, count]) => {
+                    const el = document.createElement('div');
+                    el.className = 'missing-item';
+                    el.textContent = `${skill} — missing in ${count} upload${count>1? 's' : ''}`;
+                    list.appendChild(el);
+                });
+                summary.appendChild(list);
+            }
+
+            uploads.innerHTML = '';
+            roleAnalyses.forEach(a => {
+                const block = document.createElement('div');
+                block.style.border = '1px solid #eef2ff';
+                block.style.padding = '10px';
+                block.style.borderRadius = '8px';
+                block.style.marginBottom = '8px';
+                const d = new Date(a.timestamp).toLocaleString();
+                const header = document.createElement('div');
+                header.style.fontWeight = '700';
+                header.textContent = `${d} — TF-IDF: ${a.tfidf_score.toFixed(1)}% • Skill Match: ${(a.skill_match*100).toFixed(1)}%`;
+                block.appendChild(header);
+
+                const ms = document.createElement('div');
+                ms.style.marginTop = '6px';
+                if (a.missing_skills && a.missing_skills.length) {
+                    ms.innerHTML = '<strong>Missing:</strong> ' + a.missing_skills.join(', ');
+                } else {
+                    ms.innerHTML = '<em style="color:#6b7280;">No missing skills recorded for this upload.</em>';
+                }
+                block.appendChild(ms);
+                uploads.appendChild(block);
+            });
+
+            // Use both methods to ensure visibility
+            backdrop.classList.add('active');
+            backdrop.style.display = 'flex';
+            backdrop.style.visibility = 'visible';
+        }
+
+        document.getElementById('modalClose').addEventListener('click', () => {
+            document.getElementById('modalBackdrop').classList.remove('active');
+            document.getElementById('modalBackdrop').style.display = 'none';
+        });
+
+        // Close modal when clicking outside (on backdrop)
+        document.getElementById('modalBackdrop').addEventListener('click', (evt) => {
+            if (evt.target.id === 'modalBackdrop') {
+                document.getElementById('modalBackdrop').classList.remove('active');
+                document.getElementById('modalBackdrop').style.display = 'none';
+            }
+        });
+
+        document.getElementById('btnLogout').addEventListener('click', async () => {
+            await fetch('/logout', { method: 'POST', credentials: 'same-origin' });
+            window.location = '/login';
+        });
+
+        loadHistory();
+    </script>
+</body>
+</html>

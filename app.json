@@ -1,0 +1,286 @@
+{
+  "users": [
+    {
+      "id": "c95af61e-e0bf-4479-b568-41470c8fb707",
+      "username": "test@example.com",
+      "email": "test@example.com",
+      "phone_number": null,
+      "password_hash": "$2b$10$UOl9qqHXNn7PSlKV2Wq0k.5796UVRZFRgFqkKgQBUi85v4uqqy9j2",
+      "created_at": "2026-02-21T08:10:37.023Z"
+    },
+    {
+      "id": "bd3d8526-afa5-4158-8f4f-f7af83ba8b0e",
+      "username": "dbcheck@example.com",
+      "email": "dbcheck@example.com",
+      "phone_number": null,
+      "password_hash": "$2b$10$mgdEEU2Br71Sob9vlrza3.WPN6ieRvufy6TwE.gmebzRzl8KRk8v2",
+      "created_at": "2026-02-21T08:16:27.695Z"
+    },
+    {
+      "id": "c085c40c-89a7-4dd3-9437-ae5794f4ad9e",
+      "username": "iscom9073@gmail.com",
+      "email": "iscom9073@gmail.com",
+      "phone_number": null,
+      "password_hash": "$2b$10$u1HXKP4g.yZt8ClwUPWqg.mKDXmSMJ.S9IwPexjWUlA.GXi.LQPFi",
+      "created_at": "2026-02-21T08:35:38.297Z"
+    },
+    {
+      "id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "username": "om_awasthi@srmap.edu.in",
+      "email": "om_awasthi@srmap.edu.in",
+      "phone_number": null,
+      "password_hash": "$2b$10$gqcKNxirZ.EIfUpgWrLmhu4vcFatTbmqk6yNso7W.A29nuNqMdVna",
+      "created_at": "2026-02-21T08:37:55.709Z"
+    },
+    {
+      "id": "43b18795-03c8-4463-88d3-9b128d934eac",
+      "username": "omawasthi2605@gmail.com",
+      "email": "omawasthi2605@gmail.com",
+      "phone_number": null,
+      "password_hash": "$2b$10$coRGwrvNWjGT2b7dyr7W9u.aBpVrtXUgLom2.P3ondfPSOjYQiHRe",
+      "created_at": "2026-02-21T09:43:45.808Z"
+    },
+    {
+      "id": "18a687ba-a0c0-4ff0-8523-e90e1240434b",
+      "username": "test@test.com",
+      "email": "test@test.com",
+      "phone_number": null,
+      "password_hash": "$2b$10$XmkAV66SooIxM8USJ59lvuR3a5sO0omN7bkm27mWIoOa9yBbTYS36",
+      "created_at": "2026-02-21T09:44:27.849Z"
+    }
+  ],
+  "analyses": [
+    {
+      "id": "5ff58c78-bb42-49dd-b2df-40f98074ccc7",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T09:08:23.519Z",
+      "job_role": "Web Developer",
+      "tfidf_score": 2.19,
+      "skill_match_json": "{\"matched\":[\"SQL\"],\"missing\":[\"AWS\",\"Agile\",\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"CSS\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Express\",\"Firebase\",\"Flask\",\"Git\",\"Google Cloud\",\"GraphQL\",\"HTML\",\"Java\",\"JavaScript\",\"Linux\",\"Material UI\",\"MongoDB\",\"MySQL\",\"Node.js\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"React\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":2.63,\"matched_count\":1,\"required_count\":38}",
+      "recommendation": "Significant skill gaps. Consider extensive preparation. ⚠️",
+      "analysis_json": "{\"job_role\":\"Web Developer\",\"tfidf_score\":2.19,\"skill_match\":{\"matched\":[\"SQL\"],\"missing\":[\"AWS\",\"Agile\",\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"CSS\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Express\",\"Firebase\",\"Flask\",\"Git\",\"Google Cloud\",\"GraphQL\",\"HTML\",\"Java\",\"JavaScript\",\"Linux\",\"Material UI\",\"MongoDB\",\"MySQL\",\"Node.js\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"React\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":2.63,\"matched_count\":1,\"required_count\":38},\"recommendation\":\"Significant skill gaps. Consider extensive preparation. ⚠️\",\"detected_skills\":[\"SQL\"]}"
+    },
+    {
+      "id": "05b1218b-8528-4da8-a885-d996ce528318",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T09:08:27.554Z",
+      "job_role": "Web Developer",
+      "tfidf_score": 2.19,
+      "skill_match_json": "{\"matched\":[\"SQL\"],\"missing\":[\"AWS\",\"Agile\",\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"CSS\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Express\",\"Firebase\",\"Flask\",\"Git\",\"Google Cloud\",\"GraphQL\",\"HTML\",\"Java\",\"JavaScript\",\"Linux\",\"Material UI\",\"MongoDB\",\"MySQL\",\"Node.js\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"React\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":2.63,\"matched_count\":1,\"required_count\":38}",
+      "recommendation": "Significant skill gaps. Consider extensive preparation. ⚠️",
+      "analysis_json": "{\"job_role\":\"Web Developer\",\"tfidf_score\":2.19,\"skill_match\":{\"matched\":[\"SQL\"],\"missing\":[\"AWS\",\"Agile\",\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"CSS\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Express\",\"Firebase\",\"Flask\",\"Git\",\"Google Cloud\",\"GraphQL\",\"HTML\",\"Java\",\"JavaScript\",\"Linux\",\"Material UI\",\"MongoDB\",\"MySQL\",\"Node.js\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"React\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":2.63,\"matched_count\":1,\"required_count\":38},\"recommendation\":\"Significant skill gaps. Consider extensive preparation. ⚠️\",\"detected_skills\":[\"SQL\"]}"
+    },
+    {
+      "id": "5c63d261-b142-4a00-af3c-1094d333b97e",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T09:09:44.156Z",
+      "job_role": "Web Developer",
+      "tfidf_score": 40,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38}",
+      "recommendation": "Moderate match. Focus learning on key missing skills. 📚",
+      "analysis_json": "{\"job_role\":\"Web Developer\",\"tfidf_score\":40,\"skill_match\":{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38},\"recommendation\":\"Moderate match. Focus learning on key missing skills. 📚\",\"detected_skills\":[\"HTML\",\"CSS\",\"JavaScript\",\"React\",\"Node.js\",\"Express\",\"Git\",\"MongoDB\",\"AWS\",\"Agile\"]}"
+    },
+    {
+      "id": "f6c966e9-269a-4cd1-8568-87d8db28b024",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T09:13:20.477Z",
+      "job_role": "Web Developer",
+      "tfidf_score": 40,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38}",
+      "recommendation": "Moderate match. Focus learning on key missing skills. 📚",
+      "analysis_json": "{\"job_role\":\"Web Developer\",\"tfidf_score\":40,\"skill_match\":{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38},\"recommendation\":\"Moderate match. Focus learning on key missing skills. 📚\",\"detected_skills\":[\"HTML\",\"CSS\",\"JavaScript\",\"React\",\"Node.js\",\"Express\",\"Git\",\"MongoDB\",\"AWS\",\"Agile\"]}"
+    },
+    {
+      "id": "5d0bc8ad-7fea-41bf-af45-af4f35f0df26",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T09:16:46.852Z",
+      "job_role": "ML Engineer",
+      "tfidf_score": 45.76,
+      "ats_score": 42.02,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40}",
+      "recommendation": "Moderate match. Focus learning on key missing skills. 📚",
+      "analysis_json": "{\"job_role\":\"ML Engineer\",\"tfidf_score\":45.76,\"ats_score\":42.02,\"skill_match\":{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40},\"recommendation\":\"Moderate match. Focus learning on key missing skills. 📚\",\"detected_skills\":[\"Python\",\"Machine Learning\",\"Deep Learning\",\"TensorFlow\",\"PyTorch\",\"Keras\",\"scikit-learn\",\"Computer Vision\",\"Neural Networks\",\"Pandas\",\"NumPy\",\"Jupyter\",\"AWS\",\"Git\",\"MLOps\",\"Research\"]}"
+    },
+    {
+      "id": "26b3ad06-7500-4519-ba42-e773bb3a23a6",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T09:49:33.881Z",
+      "job_role": "ML Engineer",
+      "tfidf_score": 45.76,
+      "ats_score": 42.02,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40}",
+      "recommendation": "Moderate match. Focus learning on key missing skills. 📚",
+      "analysis_json": "{\"job_role\":\"ML Engineer\",\"tfidf_score\":45.76,\"ats_score\":42.02,\"skill_match\":{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40},\"recommendation\":\"Moderate match. Focus learning on key missing skills. 📚\",\"detected_skills\":[\"Python\",\"Machine Learning\",\"Deep Learning\",\"TensorFlow\",\"PyTorch\",\"Keras\",\"scikit-learn\",\"Computer Vision\",\"Neural Networks\",\"Pandas\",\"NumPy\",\"Jupyter\",\"AWS\",\"Git\",\"MLOps\",\"Research\"]}"
+    },
+    {
+      "id": "56f6691e-d551-4865-94ed-6baa6f85a208",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T09:50:44.549Z",
+      "job_role": "Web Developer",
+      "tfidf_score": 40,
+      "ats_score": 31.11,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38}",
+      "recommendation": "Significant skill gaps. Consider extensive preparation. ⚠️",
+      "analysis_json": "{\"job_role\":\"Web Developer\",\"tfidf_score\":40,\"ats_score\":31.11,\"skill_match\":{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38},\"recommendation\":\"Significant skill gaps. Consider extensive preparation. ⚠️\",\"detected_skills\":[\"HTML\",\"CSS\",\"JavaScript\",\"React\",\"Node.js\",\"Express\",\"Git\",\"MongoDB\",\"AWS\",\"Agile\"]}"
+    },
+    {
+      "id": "1a8bcf65-24b7-442f-b04d-21248754cb41",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T09:55:01.490Z",
+      "job_role": "Web Developer",
+      "tfidf_score": 40,
+      "ats_score": 31.11,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38}",
+      "recommendation": "Significant skill gaps. Consider extensive preparation. ⚠️",
+      "analysis_json": "{\"job_role\":\"Web Developer\",\"tfidf_score\":40,\"ats_score\":31.11,\"skill_match\":{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38},\"recommendation\":\"Significant skill gaps. Consider extensive preparation. ⚠️\",\"detected_skills\":[\"HTML\",\"CSS\",\"JavaScript\",\"React\",\"Node.js\",\"Express\",\"Git\",\"MongoDB\",\"AWS\",\"Agile\"]}"
+    },
+    {
+      "id": "60521ce2-4adc-4f58-9fa8-befbe1d56058",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T09:56:54.177Z",
+      "job_role": "Web Developer",
+      "tfidf_score": 40,
+      "ats_score": 31.11,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38}",
+      "recommendation": "Significant skill gaps. Consider extensive preparation. ⚠️",
+      "analysis_json": "{\"job_role\":\"Web Developer\",\"tfidf_score\":40,\"ats_score\":31.11,\"skill_match\":{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38},\"recommendation\":\"Significant skill gaps. Consider extensive preparation. ⚠️\",\"detected_skills\":[\"HTML\",\"CSS\",\"JavaScript\",\"React\",\"Node.js\",\"Express\",\"Git\",\"MongoDB\",\"AWS\",\"Agile\"]}"
+    },
+    {
+      "id": "2636e8f1-b84d-41df-b467-9d15b223d039",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T09:59:14.289Z",
+      "job_role": "ML Engineer",
+      "tfidf_score": 45.76,
+      "ats_score": 42.02,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40}",
+      "recommendation": "Moderate match. Focus learning on key missing skills. 📚",
+      "analysis_json": "{\"job_role\":\"ML Engineer\",\"tfidf_score\":45.76,\"ats_score\":42.02,\"skill_match\":{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40},\"recommendation\":\"Moderate match. Focus learning on key missing skills. 📚\",\"detected_skills\":[\"Python\",\"Machine Learning\",\"Deep Learning\",\"TensorFlow\",\"PyTorch\",\"Keras\",\"scikit-learn\",\"Computer Vision\",\"Neural Networks\",\"Pandas\",\"NumPy\",\"Jupyter\",\"AWS\",\"Git\",\"MLOps\",\"Research\"]}"
+    },
+    {
+      "id": "3d408465-46c7-4456-9aab-acbdb1bd7e49",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T10:10:10.353Z",
+      "job_role": "ML Engineer",
+      "tfidf_score": 45.76,
+      "ats_score": 42.02,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40}",
+      "recommendation": "Moderate match. Focus learning on key missing skills. 📚",
+      "analysis_json": "{\"job_role\":\"ML Engineer\",\"tfidf_score\":45.76,\"ats_score\":42.02,\"skill_match\":{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40},\"recommendation\":\"Moderate match. Focus learning on key missing skills. 📚\",\"detected_skills\":[\"Python\",\"Machine Learning\",\"Deep Learning\",\"TensorFlow\",\"PyTorch\",\"Keras\",\"scikit-learn\",\"Computer Vision\",\"Neural Networks\",\"Pandas\",\"NumPy\",\"Jupyter\",\"AWS\",\"Git\",\"MLOps\",\"Research\"]}"
+    },
+    {
+      "id": "a187cea8-f0b6-43ca-939c-0fe731fc5967",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T10:10:47.143Z",
+      "job_role": "Web Developer",
+      "tfidf_score": 40,
+      "ats_score": 31.11,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38}",
+      "recommendation": "Significant skill gaps. Consider extensive preparation. ⚠️",
+      "analysis_json": "{\"job_role\":\"Web Developer\",\"tfidf_score\":40,\"ats_score\":31.11,\"skill_match\":{\"matched\":[\"AWS\",\"Agile\",\"CSS\",\"Express\",\"Git\",\"HTML\",\"JavaScript\",\"MongoDB\",\"Node.js\",\"React\"],\"missing\":[\"Angular\",\"Attention to Detail\",\"Bootstrap\",\"C#\",\"Communication\",\"Creativity\",\"Django\",\"Docker\",\"Firebase\",\"Flask\",\"Google Cloud\",\"GraphQL\",\"Java\",\"Linux\",\"Material UI\",\"MySQL\",\"PHP\",\"PostgreSQL\",\"Problem Solving\",\"REST API\",\"SQL\",\"Sass\",\"Teamwork\",\"Time Management\",\"TypeScript\",\"Vue\",\"npm\",\"webpack\"],\"match_percentage\":26.32,\"matched_count\":10,\"required_count\":38},\"recommendation\":\"Significant skill gaps. Consider extensive preparation. ⚠️\",\"detected_skills\":[\"HTML\",\"CSS\",\"JavaScript\",\"React\",\"Node.js\",\"Express\",\"Git\",\"MongoDB\",\"AWS\",\"Agile\"]}"
+    },
+    {
+      "id": "9b859d3c-54bf-4391-9b91-a2e73c9c468c",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T10:13:42.488Z",
+      "job_role": "Data Analyst",
+      "tfidf_score": 56.73,
+      "ats_score": 38.73,
+      "skill_match_json": "{\"matched\":[\"Data Visualization\",\"ETL\",\"Excel\",\"Pandas\",\"Power BI\",\"Python\",\"SQL\",\"Statistics\",\"Tableau\"],\"missing\":[\"A/B Testing\",\"Apache Spark\",\"Attention to Detail\",\"Business Acumen\",\"Communication\",\"Critical Thinking\",\"DAX\",\"Data Mining\",\"Google Analytics\",\"JavaScript\",\"Looker\",\"Matplotlib\",\"MongoDB\",\"MySQL\",\"NumPy\",\"PostgreSQL\",\"Problem Solving\",\"R\",\"SAS\",\"SPSS\",\"Scala\",\"Seaborn\"],\"match_percentage\":29.03,\"matched_count\":9,\"required_count\":31}",
+      "recommendation": "Significant skill gaps. Consider extensive preparation. ⚠️",
+      "analysis_json": "{\"job_role\":\"Data Analyst\",\"tfidf_score\":56.73,\"ats_score\":38.73,\"skill_match\":{\"matched\":[\"Data Visualization\",\"ETL\",\"Excel\",\"Pandas\",\"Power BI\",\"Python\",\"SQL\",\"Statistics\",\"Tableau\"],\"missing\":[\"A/B Testing\",\"Apache Spark\",\"Attention to Detail\",\"Business Acumen\",\"Communication\",\"Critical Thinking\",\"DAX\",\"Data Mining\",\"Google Analytics\",\"JavaScript\",\"Looker\",\"Matplotlib\",\"MongoDB\",\"MySQL\",\"NumPy\",\"PostgreSQL\",\"Problem Solving\",\"R\",\"SAS\",\"SPSS\",\"Scala\",\"Seaborn\"],\"match_percentage\":29.03,\"matched_count\":9,\"required_count\":31},\"recommendation\":\"Significant skill gaps. Consider extensive preparation. ⚠️\",\"detected_skills\":[\"Python\",\"SQL\",\"Excel\",\"Power BI\",\"Tableau\",\"Pandas\",\"Statistics\",\"ETL\",\"Data Visualization\"]}"
+    },
+    {
+      "id": "057b23ac-d330-4546-aa15-4a0f170faa51",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T10:16:31.840Z",
+      "job_role": "Data Analyst",
+      "tfidf_score": 56.73,
+      "ats_score": 38.73,
+      "skill_match_json": "{\"matched\":[\"Data Visualization\",\"ETL\",\"Excel\",\"Pandas\",\"Power BI\",\"Python\",\"SQL\",\"Statistics\",\"Tableau\"],\"missing\":[\"A/B Testing\",\"Apache Spark\",\"Attention to Detail\",\"Business Acumen\",\"Communication\",\"Critical Thinking\",\"DAX\",\"Data Mining\",\"Google Analytics\",\"JavaScript\",\"Looker\",\"Matplotlib\",\"MongoDB\",\"MySQL\",\"NumPy\",\"PostgreSQL\",\"Problem Solving\",\"R\",\"SAS\",\"SPSS\",\"Scala\",\"Seaborn\"],\"match_percentage\":29.03,\"matched_count\":9,\"required_count\":31}",
+      "recommendation": "Significant skill gaps. Consider extensive preparation. ⚠️",
+      "analysis_json": "{\"job_role\":\"Data Analyst\",\"tfidf_score\":56.73,\"ats_score\":38.73,\"skill_match\":{\"matched\":[\"Data Visualization\",\"ETL\",\"Excel\",\"Pandas\",\"Power BI\",\"Python\",\"SQL\",\"Statistics\",\"Tableau\"],\"missing\":[\"A/B Testing\",\"Apache Spark\",\"Attention to Detail\",\"Business Acumen\",\"Communication\",\"Critical Thinking\",\"DAX\",\"Data Mining\",\"Google Analytics\",\"JavaScript\",\"Looker\",\"Matplotlib\",\"MongoDB\",\"MySQL\",\"NumPy\",\"PostgreSQL\",\"Problem Solving\",\"R\",\"SAS\",\"SPSS\",\"Scala\",\"Seaborn\"],\"match_percentage\":29.03,\"matched_count\":9,\"required_count\":31},\"recommendation\":\"Significant skill gaps. Consider extensive preparation. ⚠️\",\"detected_skills\":[\"Python\",\"SQL\",\"Excel\",\"Power BI\",\"Tableau\",\"Pandas\",\"Statistics\",\"ETL\",\"Data Visualization\"]}"
+    },
+    {
+      "id": "212d00a1-cb4c-4190-a61d-0d1be9b8fa5c",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T17:21:58.028Z",
+      "job_role": "ML Engineer",
+      "tfidf_score": 45.76,
+      "ats_score": 42.02,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40}",
+      "recommendation": "Moderate match. Focus learning on key missing skills. 📚",
+      "analysis_json": "{\"job_role\":\"ML Engineer\",\"tfidf_score\":45.76,\"ats_score\":42.02,\"skill_match\":{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40},\"recommendation\":\"Moderate match. Focus learning on key missing skills. 📚\",\"detected_skills\":[\"Python\",\"Machine Learning\",\"Deep Learning\",\"TensorFlow\",\"PyTorch\",\"Keras\",\"scikit-learn\",\"Computer Vision\",\"Neural Networks\",\"Pandas\",\"NumPy\",\"Jupyter\",\"AWS\",\"Git\",\"MLOps\",\"Research\"]}"
+    },
+    {
+      "id": "4e50b77f-856e-4613-b284-e1fa9f6fd289",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T17:25:42.281Z",
+      "job_role": "ML Engineer",
+      "tfidf_score": 45.76,
+      "ats_score": 42.02,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40}",
+      "recommendation": "Moderate match. Focus learning on key missing skills. 📚",
+      "analysis_json": "{\"job_role\":\"ML Engineer\",\"tfidf_score\":45.76,\"ats_score\":42.02,\"skill_match\":{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40},\"recommendation\":\"Moderate match. Focus learning on key missing skills. 📚\",\"detected_skills\":[\"Python\",\"Machine Learning\",\"Deep Learning\",\"TensorFlow\",\"PyTorch\",\"Keras\",\"scikit-learn\",\"Computer Vision\",\"Neural Networks\",\"Pandas\",\"NumPy\",\"Jupyter\",\"AWS\",\"Git\",\"MLOps\",\"Research\"]}"
+    },
+    {
+      "id": "3735d42d-8037-472f-953c-1d4d15a5837e",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T17:26:19.800Z",
+      "job_role": "ML Engineer",
+      "tfidf_score": 45.76,
+      "ats_score": 42.02,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40}",
+      "recommendation": "Moderate match. Focus learning on key missing skills. 📚",
+      "analysis_json": "{\"job_role\":\"ML Engineer\",\"tfidf_score\":45.76,\"ats_score\":42.02,\"skill_match\":{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40},\"recommendation\":\"Moderate match. Focus learning on key missing skills. 📚\",\"detected_skills\":[\"Python\",\"Machine Learning\",\"Deep Learning\",\"TensorFlow\",\"PyTorch\",\"Keras\",\"scikit-learn\",\"Computer Vision\",\"Neural Networks\",\"Pandas\",\"NumPy\",\"Jupyter\",\"AWS\",\"Git\",\"MLOps\",\"Research\"]}"
+    },
+    {
+      "id": "b49cfbf8-930f-4bbf-acf4-fe4c048ad6f9",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "timestamp": "2026-02-21T17:29:53.073Z",
+      "job_role": "ML Engineer",
+      "tfidf_score": 45.76,
+      "ats_score": 42.02,
+      "skill_match_json": "{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40}",
+      "recommendation": "Moderate match. Focus learning on key missing skills. 📚",
+      "analysis_json": "{\"job_role\":\"ML Engineer\",\"tfidf_score\":45.76,\"ats_score\":42.02,\"skill_match\":{\"matched\":[\"AWS\",\"Computer Vision\",\"Deep Learning\",\"Git\",\"Jupyter\",\"Keras\",\"MLOps\",\"Machine Learning\",\"Neural Networks\",\"NumPy\",\"Pandas\",\"PyTorch\",\"Python\",\"Research\",\"TensorFlow\",\"scikit-learn\"],\"missing\":[\"Attention to Detail\",\"CNN\",\"Calculus\",\"Communication\",\"Creativity\",\"Docker\",\"Google Cloud\",\"Hadoop\",\"Kubernetes\",\"LSTM\",\"Linear Algebra\",\"Linux\",\"Matplotlib\",\"Natural Language Processing\",\"Problem Solving\",\"R\",\"RNN\",\"Reinforcement Learning\",\"SQL\",\"Scala\",\"Spark\",\"Statistics\",\"Teamwork\",\"Transformers\"],\"match_percentage\":40,\"matched_count\":16,\"required_count\":40},\"recommendation\":\"Moderate match. Focus learning on key missing skills. 📚\",\"detected_skills\":[\"Python\",\"Machine Learning\",\"Deep Learning\",\"TensorFlow\",\"PyTorch\",\"Keras\",\"scikit-learn\",\"Computer Vision\",\"Neural Networks\",\"Pandas\",\"NumPy\",\"Jupyter\",\"AWS\",\"Git\",\"MLOps\",\"Research\"]}"
+    }
+  ],
+  "password_resets": [
+    {
+      "id": "331db1e6-96ed-4c7f-8e4a-655d60ad6189",
+      "user_id": "bd3d8526-afa5-4158-8f4f-f7af83ba8b0e",
+      "token": "1d7b827a11dd43828bc1a67c7c06118a",
+      "expires_at": "2026-02-21T09:16:29.447Z",
+      "created_at": "2026-02-21T08:16:29.447Z"
+    },
+    {
+      "id": "666c6402-6011-4d57-9b7b-82255d7b8820",
+      "user_id": "bd3d8526-afa5-4158-8f4f-f7af83ba8b0e",
+      "token": "b361eeb91fe1452f8803de19578caa22",
+      "expires_at": "2026-02-21T09:18:40.982Z",
+      "created_at": "2026-02-21T08:18:40.982Z"
+    },
+    {
+      "id": "351dac4c-be79-4347-a0b0-dca971e23214",
+      "user_id": "c085c40c-89a7-4dd3-9437-ae5794f4ad9e",
+      "token": "149854",
+      "identifier": "iscom9073@gmail.com",
+      "expires_at": "2026-02-21T09:48:14.839Z",
+      "created_at": "2026-02-21T08:48:14.839Z",
+      "reset_ticket": "79ef520e6b4b4c1b985214e0b8174970",
+      "reset_ticket_expires_at": "2026-02-21T08:58:21.551Z",
+      "verified_at": "2026-02-21T08:48:21.551Z"
+    },
+    {
+      "id": "cbb4b32b-ca49-449b-8449-0f72c33d13ee",
+      "user_id": "cb17ba75-f60e-4bce-8af9-c4a502902a57",
+      "token": "648664",
+      "identifier": "om_awasthi@srmap.edu.in",
+      "expires_at": "2026-02-21T09:49:37.450Z",
+      "created_at": "2026-02-21T08:49:37.450Z",
+      "reset_ticket": "1c9dc8af046c49ab8df36c40a670bbb9",
+      "reset_ticket_expires_at": "2026-02-21T08:59:55.967Z",
+      "verified_at": "2026-02-21T08:49:55.967Z"
+    }
+  ]
+}
